@@ -1,55 +1,71 @@
-/* ===== FOOTER DAVANTE (AZUL OSCURO) ===== */
+/* ===== FOOTER DAVANTE (AZUL OSCURO) CON LUZ SUPERIOR ===== */
 .footer-davante {
   background: #00246d;
   color: #d6e0ff;
   padding: 60px 40px;
-  font-size: 1.05rem; /* ← más grande */
+  font-size: 1.05rem;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Títulos */
-.footer-davante h4,
-.footer-davante h5 {
+/* LUZ SUPERIOR */
+.footer-davante::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 6px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  filter: blur(4px);
+  opacity: 0.9;
+  pointer-events: none;
+  border-radius: 100px;
+}
+
+/* ===== PARTE SUPERIOR (IDIOMA + SOCIAL) ===== */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+}
+
+.footer-top .footer-col {
+  flex: 1;
+  min-width: 240px;
+}
+
+.footer-davante h4 {
   color: #ffffff;
   margin-bottom: 18px;
   font-weight: 600;
-  text-align: center;
-  font-size: 1.2rem; /* ← más grande */
-}
-
-/* Parte superior */
-.footer-top {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 80px;
-  flex-wrap: wrap;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
-  padding-bottom: 40px;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
-/* Columnas */
-.footer-col {
-  min-width: 200px;
+  font-size: 1.2rem;
 }
 
 .footer-lang-list {
   line-height: 1.7;
   color: #ced8ff;
-  font-size: 1.05rem; /* ← más grande */
+  font-size: 1.05rem;
 }
 
-/* Iconos sociales */
+/* ICONOS SOCIALES */
 .footer-social {
   display: flex;
-  justify-content: center;
   gap: 18px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .footer-social i {
-  font-size: 1.6rem; /* ← más grandes */
+  font-size: 1.6rem;
   cursor: pointer;
   color: #ced8ff;
   transition: 0.2s ease;
@@ -59,57 +75,52 @@
   color: #ffffff;
 }
 
-/* Selector de moneda — más pequeño */
-.footer-currency {
-  padding: 10px 12px;
-  background: #003594;
-  border: 1px solid rgba(255,255,255,0.2);
-  color: white;
-  border-radius: 6px;
-  width: 140px;     /* ← más pequeño */
-  margin: 0 auto;
-  display: block;
-  font-size: 0.9rem; /* ← tamaño adecuado */
+/* SEPARADOR */
+.footer-divider {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  margin: 30px 0;
 }
 
-/* Enlaces */
+/* ===== BLOQUE INFERIOR (4 COLUMNAS) ===== */
 .footer-links {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 70px;
-  margin-top: 40px;
-  text-align: center;
+  gap: 50px;
+}
+
+.footer-box {
+  flex: 1;
+  min-width: 200px;
 }
 
 .footer-box ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .footer-box ul li {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .footer-box a {
+  color: #d6e0ff;
   text-decoration: none;
-  color: #e3eaff;
   transition: 0.2s;
-  font-size: 1.05rem; /* ← más grande */
+  font-size: 1.05rem;
 }
 
 .footer-box a:hover {
   color: #ffffff;
 }
 
-/* Parte inferior */
+/* ===== PARTE INFERIOR ===== */
 .footer-bottom {
-  margin-top: 40px;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 20px;
   text-align: center;
+  margin-top: 40px;
   color: #cdd7ff;
-  font-size: 1rem; /* ← ligeramente más grande */
 }
 
 .footer-legal a {
@@ -121,17 +132,17 @@
   color: #ffffff;
 }
 
-/* Responsive */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .footer-top,
   .footer-links {
-    gap: 40px;
+    display: block;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
   }
 }
 
-@media (max-width: 480px) {
-  .footer-top {
-    flex-direction: column;
-    gap: 30px;
-  }
-}
 
