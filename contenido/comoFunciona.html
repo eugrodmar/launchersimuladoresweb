@@ -1,3 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
 
-    <h1>How it works</h1>
-<img src="../images/LauncherDesignV1.png" alt="Foto de prueba" width="1000">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Launcher simuladores</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <!-- Barra principal -->
+    <nav class="barra_principal">
+      <ul class="menu-centro">
+        <li><a href="#">Acerca de</a></li>
+        <li><a href="comoFunciona.html">Como funciona</a></li>
+        <li><a href="#">Descargar launcher</a></li>
+        <li><a href="creadoPorEstudiantes.html">Creado por estudiantes</a></li>
+        <li><a href="#">Casos de uso</a></li>
+      </ul>
+
+      <!-- Botón hamburguesa -->
+      <button class="toggle-btn" aria-label="Abrir menú">
+        <img src="images/Davante_simbolo_white.png" alt="Menú">
+      </button>
+    </nav>
+
+    <!-- Menú fullscreen -->
+    <nav class="menu_hamburguesa">
+      <!-- Botón cerrar dentro del menú -->
+      <button class="close-btn" aria-label="Cerrar menú">
+        <i class="bi bi-x"></i>
+      </button>
+
+      <ul>
+        <li><a href="#">Hero + CTA</a></li>
+        <li><a href="comoFunciona.html">Cómo funciona</a></li>
+        <li><a href="#">Catálogo</a></li>
+        <li><a href="creadoPorEstudiantes.html">Creado por estudiantes</a></li>
+        <li><a href="#">Casos de uso</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    
+    <section id="instalar-launcher">
+      <div class="hero-launcher"></div>
+      
+      <h2>Instalación del Launcher</h2>
+
+  <!-- sección descarga -->
+  <article>
+    <figure>
+      <a href="images/descarga.png" target="_blank" rel="noopener">
+        <img src="images/descarga.png" alt="Descargar el launcher" loading="lazy">
+      </a>
+      <figcaption>1. Descargar el Launcher</figcaption>
+    </figure>
+    <p>Descarga el instalador desde la página oficial y guárdalo en una ubicación que puedas encontrar fácilmente.</p>
+  </article>
+
+  <!-- sección instalación -->
+  <article>
+    <figure>
+      <a href="images/instalar.png" target="_blank" rel="noopener">
+        <img src="images/instalar.png" alt="Instalar el simulador deseado" loading="lazy">
+      </a>
+      <figcaption>2. Instalar el simulador deseado</figcaption>
+    </figure>
+    <p>Ejecuta el instalador del simulador que quieras usar y sigue los pasos del asistente de instalación.</p>
+  </article>
+
+  <!-- sección actualizacion -->
+  <article>
+    <figure>
+      <a href="images/actualizacion.png" target="_blank" rel="noopener">
+        <img src="images/actualizacion.png" alt="Comprobar actualizaciones" loading="lazy">
+      </a>
+      <figcaption>3. Comprobar si hay actualizaciones</figcaption>
+    </figure>
+    <p>Cada vez que ejecutes el launcher, verifica si existe una versión nueva disponible.</p>
+  </article>
+  </main>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.querySelector(".toggle-btn");
+      const menuHamburguesa = document.querySelector(".menu_hamburguesa");
+      const closeBtn = document.querySelector(".close-btn");
+
+      // Abrir menú
+      toggleBtn.addEventListener("click", () => {
+        menuHamburguesa.classList.add("show");
+      });
+
+      // Cerrar menú
+      closeBtn.addEventListener("click", () => {
+        menuHamburguesa.classList.remove("show");
+      });
+    });
+  </script>
+
+</body>
+</html>
