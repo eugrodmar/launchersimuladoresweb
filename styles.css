@@ -247,63 +247,44 @@ header {
 
 /*ESTUDIANTES*/
 
-#creadoPorEstudiantes {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 16px;
-  font-family: Arial, sans-serif;
-  color: #1f2937;
-}
-
-/* Título */
-#creadoPorEstudiantes h2 {
-  text-align: center;
-  font-size: 1.9rem;
-  margin-bottom: 32px;
-}
-
-/* Tarjeta de cada paso */
-#creadoPorEstudiantes article {
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 28px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.06);
-  transition: transform 0.15s ease;
-}
-
-/* Pequeño efecto al pasar por encima */
-#creadoPorEstudiantes article:hover {
-  transform: translateY(-4px);
-}
-
-/* Figura con imagen */
-#creadoPorEstudiantes figure {
-  margin: 0;
+.seccion {
+  padding: 40px 20px;
   text-align: center;
 }
 
-/* Imagen responsiva */
-#creadoPorEstudiantes img {
-  max-width: 40%;
-  height: auto;
-  border-radius: 6px;
+.contenedor-personas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
-/* Texto debajo de la imagen */
-#creadoPorEstudiantes figcaption {
-  margin-top: 10px;
-  font-weight: bold;
-  font-size: 1.15rem;
-}
-
-/* Descripción */
-#creadoPorEstudiantes p {
-  margin-top: 10px;
-  color: #4b5563;
-  line-height: 1.5;
+.tarjeta {
+  width: 220px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   text-align: center;
+  padding-bottom: 15px;
 }
+
+.tarjeta img {
+  width: 90%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+.tarjeta h3 {
+  margin: 10px 0 5px;
+}
+
+.tarjeta p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
 
 /* Distribución en pantallas grandes */
 @media (min-width: 720px) {
@@ -331,6 +312,7 @@ header {
     text-align: left;
   }
 }
+
 /*iconos github y linkedin*/
 
   svg{
