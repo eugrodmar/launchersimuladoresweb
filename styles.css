@@ -149,6 +149,14 @@ header {
   100% { opacity: 1; transform: translateY(0); }
 }
 
+
+/* ===== MAIN ===== */
+.contenedor {
+  padding: 40px 20px;
+  min-height: 80vh;
+  box-sizing: border-box;
+}
+
 /*TEXTO PLANO CRIS*/
 
 
@@ -239,7 +247,7 @@ header {
 
 /*ESTUDIANTES*/
 
-#estudiantes {
+#creadoPorEstudiantes {
   max-width: 900px;
   margin: 40px auto;
   padding: 0 16px;
@@ -248,14 +256,14 @@ header {
 }
 
 /* Título */
-#estudiantes h2 {
+#creadoPorEstudiantes h2 {
   text-align: center;
   font-size: 1.9rem;
   margin-bottom: 32px;
 }
 
 /* Tarjeta de cada paso */
-#estudiantes article {
+#creadoPorEstudiantes article {
   background: #ffffff;
   border-radius: 10px;
   padding: 20px;
@@ -265,32 +273,32 @@ header {
 }
 
 /* Pequeño efecto al pasar por encima */
-#estudiantes article:hover {
+#creadoPorEstudiantes article:hover {
   transform: translateY(-4px);
 }
 
 /* Figura con imagen */
-#estudiantes figure {
+#creadoPorEstudiantes figure {
   margin: 0;
   text-align: center;
 }
 
 /* Imagen responsiva */
-#estudiantes img {
+#creadoPorEstudiantes img {
   max-width: 40%;
   height: auto;
   border-radius: 6px;
 }
 
 /* Texto debajo de la imagen */
-#estudiantes figcaption {
+#creadoPorEstudiantes figcaption {
   margin-top: 10px;
   font-weight: bold;
   font-size: 1.15rem;
 }
 
 /* Descripción */
-#estudiantes p {
+#creadoPorEstudiantes p {
   margin-top: 10px;
   color: #4b5563;
   line-height: 1.5;
@@ -402,19 +410,12 @@ header {
 
 /*FIN CSS TEXTO PLANO CRIS*/
 
-/* ===== MAIN ===== */
-.contenedor {
-  padding: 40px 20px;
-  min-height: 80vh;
-  box-sizing: border-box;
-}
-
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .menu-centro {
     gap: 15px;
   }
-
+  
   .menu_hamburguesa a {
     font-size: 1.8rem;
   }
