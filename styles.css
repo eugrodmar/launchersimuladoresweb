@@ -163,27 +163,39 @@ header {
 
 /*HERO*/
 .hero-inicio {
-  height: 50vh;
+  height: 70vh;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url("../images/WebDiseñadaporestudiantes.png");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-estudiantes {
-  height: 50vh;
+  height: 70vh;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url("../images/davante-alumnos.png");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-launcher {
-  height: 50vh;
+  height: 70vh;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url("images/LauncherDesignV1.png");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 
@@ -195,7 +207,7 @@ header {
 .guia-instalacion {
     font-size: 1.8rem;
     font-weight: 600;
-    color: #3b4550; /* tu color primario */
+    color: #3b4550; 
     text-align: center;
     margin-top: 20px;
     margin-bottom: 30px;
@@ -226,10 +238,10 @@ header {
   transition: transform 0.15s ease;
 }
 
-/* Pequeño efecto al pasar por encima */
+ /*Pequeño efecto al pasar por encima */
 #instalar-launcher article:hover {
   transform: translateY(-4px);
-}
+} 
 
 /* Figura con imagen */
 #instalar-launcher figure {
@@ -291,7 +303,7 @@ header {
 .creado-estudiantes {
     font-size: 1.8rem;
     font-weight: 600;
-    color: #3b4550; /* tu color primario */
+    color: #3b4550; 
     text-align: center;
     margin-top: 20px;
     margin-bottom: 30px;
