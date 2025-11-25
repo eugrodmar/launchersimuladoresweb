@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /* ===== RESETEO ===== */
 * {
   font-family: 'Manrope', sans-serif;
@@ -172,3 +173,509 @@ header {
     font-size: 1.5rem;
   }
 }
+=======
+/* ===== RESETEO ===== */
+* {
+  font-family: 'Manrope', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ededed;
+  
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  background: #003594;
+  position: relative;
+  z-index: 100;
+  align-items: center;
+  padding: 15px 40px;
+  box-sizing: border-box; /* Evita que padding afecte al width/height */
+}
+
+/* ===== BARRA PRINCIPAL ===== */
+.barra_principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+}
+
+/* Menú principal */
+.menu-centro {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin-left: 60px;
+}
+
+.menu-centro a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px; /* Padding fijo evita que se mueva al hover */
+  border-radius: 50px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.menu-centro a:hover {
+  background: #00246d; /* Solo cambia el background, no el padding */
+}
+
+/* Botón hamburguesa */
+.toggle-btn {
+  position: absolute;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  z-index: 101; /* Asegura que quede sobre header */
+}
+
+.toggle-btn img {
+  width: 30px;           /* Tamaño del icono */
+  height: 30px;
+  object-fit: contain;   /* Evita distorsión de la imagen */
+  display: block;        /* Elimina espacio inferior de inline img */
+  transition: transform 0.3s ease; /* Para animaciones futuras */
+}
+
+.toggle-btn:hover img {
+  transform: scale(1.1); /* Efecto hover: pequeño zoom */
+}
+
+/* ===== MENÚ HAMBURGUESA FULLSCREEN ===== */
+.menu_hamburguesa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #003594;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+}
+
+.menu_hamburguesa.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Lista de opciones */
+.menu_hamburguesa ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+/* Opciones del menú con animación de slide */
+.menu_hamburguesa.show ul li {
+  animation: slideFade 0.4s ease forwards;
+}
+
+.menu_hamburguesa a {
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.menu_hamburguesa a:hover {
+  color:  #FF5B41; 
+}
+
+/* Botón cerrar */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 10000; /* Siempre sobre el menú */
+}
+
+/* ===== ANIMACIÓN SLIDE DOWN ===== */
+@keyframes slideFade {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ===== MAIN ===== */
+.contenedor {
+  padding: 40px 20px;
+  min-height: 80vh;
+  box-sizing: border-box;
+}
+
+/*TEXTO PLANO CRIS*/
+
+/*inicio*/
+
+/*HERO*/
+.hero-inicio {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/WebDiseñadaporestudiantes.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-estudiantes {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/davante-alumnos.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-launcher {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/LauncherDesignV1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+/*LAUNCHER*/
+
+/*guia instalación*/
+
+.guia-instalacion {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #3b4550; 
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#instalar-launcher {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 16px;
+  font-family: Arial, sans-serif;
+  color: #1f2937;
+}
+
+/* Título */
+#instalar-launcher h2 {
+  text-align: center;
+  font-size: 1.9rem;
+  margin-bottom: 32px;
+}
+
+/* Tarjeta de cada paso */
+#instalar-launcher article {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 28px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.06);
+  transition: transform 0.15s ease;
+}
+
+ /*Pequeño efecto al pasar por encima */
+#instalar-launcher article:hover {
+  transform: translateY(-4px);
+} 
+
+/* Figura con imagen */
+#instalar-launcher figure {
+  margin: 0;
+  text-align: center;
+}
+
+/* Imagen responsiva */
+#instalar-launcher img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Texto debajo de la imagen */
+#instalar-launcher figcaption {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+/* Descripción */
+#instalar-launcher p {
+  margin-top: 10px;
+  color: #4b5563;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Distribución en pantallas grandes */
+@media (min-width: 720px) {
+  #instalar-launcher article {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 24px;
+  }
+
+  #instalar-launcher figure,
+  #instalar-launcher p {
+    flex: 1;
+  }
+
+  #instalar-launcher figure {
+    text-align: left;
+  }
+
+  #instalar-launcher p {
+    text-align: left;
+  }
+
+  #instalar-launcher figcaption {
+    text-align: left;
+  }
+}
+
+/*ESTUDIANTES*/
+
+.creado-estudiantes {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #3b4550; 
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.seccion {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contenedor-personas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tarjeta {
+  width: 220px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.tarjeta img {
+  width: 90%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+.tarjeta h3 {
+  margin: 10px 0 5px;
+}
+
+.tarjeta p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+
+/* Distribución en pantallas grandes */
+@media (min-width: 720px) {
+  #estudiantes article {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 24px;
+  }
+
+  #estudiantes figure,
+  #estudiantes p {
+    flex: 1;
+  }
+
+  #estudiantes figure {
+    text-align: left;
+  }
+
+  #estudiantes p {
+    text-align: left;
+  }
+
+  #estudiantes figcaption {
+    text-align: left;
+  }
+}
+
+/*iconos github y linkedin*/
+
+  svg{
+
+    color:#ededed;
+    background:#003594;
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    padding: 16px;
+  }
+
+
+/*FIN CSS TEXTO PLANO CRIS*/
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .menu-centro {
+    gap: 15px;
+  }
+  
+  .menu_hamburguesa a {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu_hamburguesa a {
+    font-size: 1.5rem;
+  }
+}
+
+/* ===== CARRUSEL CATÁGOLO ===== */
+
+.catalogue {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 70px;
+    overflow: hidden;
+}
+
+.carrousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.images{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.img{
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.85);
+    height: 500px;
+    width: 900px;
+    border-radius: 10px ;
+    margin: 5px;
+    object-fit: cover;
+}
+
+.arrow {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 0 !important;
+    background: none !important;
+    color: #003594;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.arrow:hover {
+    transform: scale(1.15);
+}
+
+.previous, .next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.dots {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #bbb;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dot.active {
+    background: #333;
+}
+
+.dots p{
+    font-size: 100px;
+    font-weight: 500;
+    margin-top: -50px;
+    color: #003594;
+}
+
+.dots .bold{
+    font-weight: 700;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #00246d ;
+}
+>>>>>>> Stashed changes
