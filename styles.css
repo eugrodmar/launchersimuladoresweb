@@ -679,3 +679,145 @@ header {
     color: #00246d ;
 }
 >>>>>>> Stashed changes
+
+/* ==== FORMULARIO DE INCIDENCIA ==== */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ededed;
+  color: #444;
+}
+
+/* Título principal */
+h1 {
+  text-align: center;
+  color: #003594;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 120px;
+  margin-bottom: -80px;
+}
+
+/* Sección centrada */
+.incidencia-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 160px 40px;
+}
+
+/* Contenedor del formulario */
+#formIncidencia {
+  background: #003594;
+  padding: 40px 50px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  width: min(100%, 650px);
+  color: #fff;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+#formIncidencia:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* Título interno */
+#formIncidencia h2 {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Etiquetas y campos */
+#formIncidencia label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+#formIncidencia input,
+#formIncidencia textarea {
+  width: 100%;
+  padding: 14px 12px;
+  border: 2px solid #d9e2ff;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #003594;
+  background: #fff;
+  outline: none;
+  margin-bottom: 20px;
+  transition: all .3s ease;
+}
+
+#formIncidencia input:focus,
+#formIncidencia textarea:focus {
+  border-color: #FF5B41;
+  box-shadow: 0 0 6px rgba(255,91,65,.4);
+}
+
+/* Botón */
+#formIncidencia button {
+  display: block;
+  margin: 10px auto 0;
+  background: #444;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 50px;
+  padding: 12px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+#formIncidencia button:hover {
+  background: #FF5B41;
+  border-color: #FF5B41;
+  box-shadow: 0 4px 10px rgba(255,91,65,.4);
+  transform: translateY(-2px);
+}
+
+/* Mensaje */
+#mensaje {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 15px;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .incidencia-section {
+    padding: 120px 20px;
+  }
+
+  #formIncidencia {
+    padding: 25px 20px;
+  }
+
+  #formIncidencia h2 {
+    font-size: 22px;
+  }
+
+  #formIncidencia button {
+    width: 100%;
+    font-size: 15px;
+    padding: 14px;
+  }
+
+  h1 {
+    font-size: 26px;
+    margin-top: 100px;
+    margin-bottom: -60px;
+  }
+}
