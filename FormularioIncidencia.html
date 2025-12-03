@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Incidencia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Formulario de Incidencia</h1>
+
+  <section class="incidencia-section">
+    <form id="formIncidencia">
+      <h2>Reporta un problema o sugerencia</h2>
+
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" placeholder="Introduce tu nombre" required>
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" placeholder="Introduce tu correo" required>
+
+      <label for="incidencia">Descripción de la incidencia:</label>
+      <textarea id="incidencia" rows="5" placeholder="Describe brevemente el problema..." required></textarea>
+
+      <button type="submit">Enviar incidencia</button>
+      <p id="mensaje"></p>
+    </form>
+  </section>
+
+  <script>
+    const form = document.getElementById("formIncidencia");
+    const mensaje = document.getElementById("mensaje");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const nombre = document.getElementById("nombre").value.trim();
+      const correo = document.getElementById("correo").value.trim();
+      const incidencia = document.getElementById("incidencia").value.trim();
+
+      if (!nombre || !correo || !incidencia) {
+        mensaje.style.color = "red";
+        mensaje.textContent = "Por favor, completa todos los campos.";
+        return;
+      }
+
+      mensaje.style.color = "green";
+      mensaje.textContent = "✅ Incidencia enviada correctamente.";
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>
