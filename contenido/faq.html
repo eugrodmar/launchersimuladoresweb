@@ -1,4 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styleFaq.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-<h1>FAQ</h1>
-<img src="/images/LauncherDesignV1.png" alt="Foto de prueba" width="1000">
-<p>Preguntas frecuentes.</p>
+
+<!-- CARRUSEL AUTOMÁTICO -->
+<div class="carrusel-container">
+  <div class="carrusel">
+
+    <div class="carrusel-slide active">
+      <img src="/images/haier.png" alt="Imagen 1">
+    </div>
+
+    <div class="carrusel-slide">
+      <img src="/images/davante.png" alt="Imagen 2">
+    </div>
+
+    <div class="carrusel-slide">
+      <img src="/images/haier.png" alt="Imagen 3">
+    </div>
+
+    <button class="carrusel-btn prev"><i class="bi bi-chevron-left"></i></button>
+    <button class="carrusel-btn next"><i class="bi bi-chevron-right"></i></button>
+  </div>
+
+  <!-- PUNTITOS (SE GENERAN AUTOMÁTICAMENTE TAMBIÉN DESDE JS) -->
+  <div class="carrusel-dots"></div>
+</div>
+
+<!--fin carrusel-->
+
+
+<section class="faq-section">
+  <h1 class="faq-title">FAQ</h1>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      ¿Qué es Launcher y para qué sirve?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p>
+        Launcher es un conjunto de herramientas diseñadas para facilitar la gestión, organización y visualización de simuladores en una misma plataforma centralizada.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      ¿Puedo usarlo desde cualquier dispositivo?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p>
+        Sí. Launcher es totalmente responsive, por lo que puedes utilizarlo desde ordenador, tablet o móvil sin problemas.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      ¿Necesito crear una cuenta?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p>
+        No es obligatorio. Puedes acceder al contenido libremente, aunque algunas funciones avanzadas requieren registro.
+      </p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">
+      ¿Cómo puedo contactar con soporte?
+      <i class="bi bi-chevron-down"></i>
+    </button>
+    <div class="faq-answer">
+      <p>
+      Desde el apartado "Contacto" , donde encontrarás las opciones.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!--FOOTER DAVANTE(Patricia) -->
+<footer class="footer-davante">
+
+ <div class="footer-top">
+    <div class="footer-col">
+        <h4>Idioma</h4>
+        <p class="footer-lang-list">
+            English · Español 
+        </p>
+    </div>
+
+    <div class="footer-col">
+        <h4>Social</h4>
+        <div class="footer-social">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-youtube"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-github"></i>
+        </div>
+    </div>
+</div>
+
+<hr class="footer-divider">
+
+<div class="footer-links">
+    <div class="footer-box">
+        <h4>Comprar</h4>
+        <ul>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Suscripción</a></li>
+            <li><a href="#">Distribuidores</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-box">
+        <h4>Educación</h4>
+        <ul>
+            <li><a href="#">Estudiantes</a></li>
+            <li><a href="#">Instructores</a></li>
+            <li><a href="#">Instituciones</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-box">
+        <h4>Recursos</h4>
+        <ul>
+            <li><a href="#">Documentación</a></li>
+            <li><a href="#">Preguntas frecuentes</a></li>
+            <li><a href="#">Casos de uso</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-box">
+        <h4>Empresa</h4>
+        <ul>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Empleo</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="footer-bottom">
+    <p>© 2025 Davante. Todos los derechos reservados.</p>
+    <p class="footer-legal">
+        <a href="#">Política de privacidad</a> · 
+        <a href="#">Cookies</a> · 
+        <a href="#">Legal</a>
+    </p>
+</div>
+</footer>
+
+
+<!-- FIN FOOTER -->
+<script>
+let index = 0;
+const slides = document.querySelectorAll('.carrusel-slide');
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+const dotsContainer = document.querySelector('.carrusel-dots');
+
+// Crear los puntitos
+slides.forEach((_, i) => {
+  const dot = document.createElement('div');
+  dot.classList.add('dot');
+  if (i === 0) dot.classList.add('active');
+  dot.dataset.index = i;
+  dotsContainer.appendChild(dot);
+});
+
+const dots = document.querySelectorAll('.dot');
+
+// Cambiar slide
+function showSlide(n) {
+  slides.forEach(slide => slide.classList.remove('active'));
+  dots.forEach(dot => dot.classList.remove('active'));
+
+  slides[n].classList.add('active');
+  dots[n].classList.add('active');
+}
+
+// Siguiente
+nextBtn.addEventListener('click', () => {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+});
+
+// Anterior
+prevBtn.addEventListener('click', () => {
+  index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
+});
+
+// Puntitos clicables
+dots.forEach(dot => {
+  dot.addEventListener('click', () => {
+    index = parseInt(dot.dataset.index);
+    showSlide(index);
+  });
+});
+
+// Autoplay (cada 3.5 segundos)
+setInterval(() => {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+}, 3500);
+</script>
+
+<!--- Preguntas abrir y cerrar--->
+<script>
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    item.classList.toggle('open');
+  });
+});
+</script>
+
+</body>
+</html>
